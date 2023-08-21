@@ -3,7 +3,7 @@ export const useRequestUser = ()=> {
 
   const addUser=async(payload)=>{
       try{
-        const {data}=await axios.post("http://localhost:3000/api/v1/register",payload)
+        const {data}=await axios.post("https://recetario-api.vercel.app/register",payload)
         return data
       }catch(error){
         return error  
@@ -11,7 +11,7 @@ export const useRequestUser = ()=> {
   }
   const userLogin=async(payload)=>{
     try{
-      const {data}=await axios.post("http://localhost:3000/api/v1/login",payload)
+      const {data}=await axios.post("https://recetario-api.vercel.app/login",payload)
       return data
     }catch(error){
       return error 
