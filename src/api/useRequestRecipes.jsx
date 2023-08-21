@@ -7,7 +7,7 @@ export const useRequestRecipes = () => {
     
     const getRecipes = async () => {
         try {
-           const res= await axios.get("http://localhost:3000/api/v1/recipes")
+           const res= await axios.get("https://recetario-api.vercel.app/recipes")
           if("recipes" in res.data){
             setRecipes(res.data.recipes)
         }
@@ -23,7 +23,7 @@ export const useRequestRecipes = () => {
     
     const addNewRecipe=async(payload)=>{
         try{
-            const res=await axios.post("http://localhost:3000/api/v1/recipes",payload)
+            const res=await axios.post("https://recetario-api.vercel.app/recipes",payload)
             return res  
         }catch(error){ 
             return error 
